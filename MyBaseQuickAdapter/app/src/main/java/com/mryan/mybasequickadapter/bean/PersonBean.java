@@ -1,10 +1,13 @@
 package com.mryan.mybasequickadapter.bean;
 
+import java.util.Random;
+
 public class PersonBean {
     String name;
     String imageUrl;
     String addr;
     int age;
+    int type = new Random().nextInt(2);
 
     public String getName() {
         return name;

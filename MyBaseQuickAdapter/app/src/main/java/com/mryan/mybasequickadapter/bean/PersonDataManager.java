@@ -49,6 +49,7 @@ public class PersonDataManager {
     }};
 
     private List<PersonBean> personBeans = new ArrayList<>();
+    private List<MultiItemPersonBean> multiItemPersonBeans = new ArrayList<>();
 
     public static PersonDataManager getInstance() {
         return instance;
@@ -68,6 +69,23 @@ public class PersonDataManager {
         }
         Log.e(TAG, "generatePersonData: " + personBeans.toString());
         return personBeans;
+    }
+
+    public List<MultiItemPersonBean> generateMultiItemPersonData(int size, boolean adding) {
+        if (!adding) {
+            multiItemPersonBeans.clear();
+        }
+        for (int i = 0; i < size; i++) {
+            MultiItemPersonBean multiItemPersonBean = new MultiItemPersonBean();
+            multiItemPersonBean.setName(names.get(getPosition()));
+            multiItemPersonBean.setAddr(addrs.get(getPosition()));
+            multiItemPersonBean.setImageUrl(imageUrls.get(getPosition()));
+            multiItemPersonBean.setAge(ages.get(getPosition()));
+            multiItemPersonBeans.add(multiItemPersonBean);
+            Log.e(TAG, "type: "+multiItemPersonBean.getItemType() );
+        }
+        Log.e(TAG, "generatePersonData: " + multiItemPersonBeans.toString());
+        return multiItemPersonBeans;
     }
 
     private int getPosition() {

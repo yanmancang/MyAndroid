@@ -32,6 +32,9 @@ public class BaseRecycleViewAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        /**
+         * 加载Item布局
+         */
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.base_recycle_item, null);
         RecyclerView.ViewHolder viewHolder = new MyViewHolder(view);
         return viewHolder;

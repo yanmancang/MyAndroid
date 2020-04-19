@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_id"
+    <Button
+        android:id="@+id/base_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:background="@color/colorAccent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:gravity="center"
+        android:onClick="jumpToActivity"
+        android:text="BaseQuicAdapterActivity基本用法"
+        tools:background="@color/orange"></Button>
+
+    <Button
+        android:id="@+id/multi_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="jumpToActivity"
+        android:text="BaseMultiItemQuickAdapterActivity基本用法"></Button>
 
 </LinearLayout>
